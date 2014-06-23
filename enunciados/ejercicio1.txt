@@ -1,4 +1,4 @@
-Añadir un enlace en la cabecera que permita cerrar la sesión (una vez iniciada). En el controller deberá agregar un método que haga algo como:
+Añadir un enlace en la cabecera que permita cerrar la sesión (una vez iniciada). 
 
 	En el Controller:
 
