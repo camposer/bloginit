@@ -1,0 +1,25 @@
+1.- Descargar Eclipse 64 Bits (Eclipse IDE for Java EE Developers)
+	http://eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplersr2
+
+2.- Descomprimir (recordar dónde!!!)
+
+3.- Descargar Apache Tomcat 7
+	http://apache.rediris.es/tomcat/tomcat-7/v7.0.54/bin/apache-tomcat-7.0.54.zip
+
+4.- Descomprimir (recordar dónde!!!)
+
+5.- Descargar código proyecto del repositorio (Download ZIP):
+	http://github.com/camposer/bloginit
+
+6.- Agregar Servidor. Dentro de la perspectiva de JEE, vista Servers:
+	- Agregar servidor
+	- Apache Tomcat 7
+	- Seleccionar la carpeta donde descomprimió el Tomcat
+	- Aceptar, aceptar, aceptar... 
+
+7.- Configurar proyecto. Ir a:
+	File -> Import -> Existing projects into Workspace -> Select archive file
+	- Buscar el ZIP (código del proyecto)
+	- Seleccionar el proyecto y aceptar
+
+
