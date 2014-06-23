@@ -11,15 +11,22 @@
 5.- Descargar código proyecto del repositorio (Download ZIP):
 	http://github.com/camposer/bloginit
 
-6.- Agregar Servidor. Dentro de la perspectiva de JEE, vista Servers:
+6.- Abrir Eclipse. Doble-clic sobre eclipse.exe
+
+7.- Agregar Servidor. Dentro de la perspectiva de JEE, vista Servers:
 	- Agregar servidor
 	- Apache Tomcat 7
 	- Seleccionar la carpeta donde descomprimió el Tomcat
 	- Aceptar, aceptar, aceptar... 
 
-7.- Configurar proyecto. Ir a:
+8.- Configurar proyecto. Ir a:
 	File -> Import -> Existing projects into Workspace -> Select archive file
 	- Buscar el ZIP (código del proyecto)
 	- Seleccionar el proyecto y aceptar
 
-
+9.- Iniciar servidor y ejecutar proyecto.
+	- Clic derecho sobre el servidor y seleccionar Add and Remove...
+	- Agregar proyecto BlogInit.
+	- Clic derecho sobre el servidor y clic en Start
+	- Ir al navegador y ejecutar:
+	http://localhost:8080/BlogInit/usuario/inicio.blog
