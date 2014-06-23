@@ -24,11 +24,18 @@ public class UsuarioController {
 		return new UsuarioForm();
 	}
 	
+	@RequestMapping("cerrarSesion")
+	public String cerrarSesion(HttpSession session ) {
+		session.invalidate();
+		
+		return "redirect:/usuario/inicio.blog";
+	}
+	
 	@RequestMapping(value={"inicio", ""})
 	public String inicio() {
 		return "/jsp/usuario/inicio.jsp";
 	}
-	
+
 	@RequestMapping("autenticar")
 	public String autenticar(@ModelAttribute("usuarioForm")
 			UsuarioForm usuarioForm, HttpSession session) {

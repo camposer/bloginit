@@ -18,6 +18,10 @@ h1 {
 	height: 100px;
 }
 
+#cabecera a {
+	color: white;
+}
+
 #formAlta {
 	margin-left: auto;
 	margin-right: auto;
@@ -66,9 +70,12 @@ h1 {
 			<%
 				Usuario u = (Usuario)session.getAttribute("usuario");
 			
-				if (u != null) {	
+				if (u != null) { // Usuario autenticado!	
 			%>
-			Bienvenido <%= u.getNombre() %>
+			Bienvenido <%= u.getNombre() %><br/>
+			<a href="/BlogInit/usuario/cerrarSesion.blog">
+				cerrar sesión
+			</a>
 			<%
 				} else {
 			%>
