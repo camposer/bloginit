@@ -1,4 +1,4 @@
-package entity;
+package model;
 
 import java.util.List;
 
@@ -53,7 +53,7 @@ public class Test {
 		
 		tx.commit();
 		
-		
+		em.close(); // Cerrando conexiones
 		
 	}
 
