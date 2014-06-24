@@ -2,12 +2,15 @@ package service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import model.Usuario;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import dao.UsuarioDao;
 
+@Transactional
 public class UsuarioServiceImpl implements UsuarioService {
 	@Autowired
 	private UsuarioDao usuarioDao;

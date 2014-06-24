@@ -4,9 +4,14 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class GenericDao<T, K> implements Dao<T, K> {
+	@Autowired
+	@PersistenceContext
 	protected EntityManager em;
 	private Class<T> clase;
 	
