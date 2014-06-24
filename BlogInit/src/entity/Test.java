@@ -6,6 +6,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 public class Test {
 	private static EntityManager em;
@@ -32,6 +33,25 @@ public class Test {
 		System.out.println();
 		listar();
 		
+		// Modificar
+		u.setNombre("otro");
+		em.persist(u); 	// Lo hace porque "u" había sido
+						// persistido anteriormente
+		
+		System.out.println();
+		listar();
+		
+		// Eliminar
+		//em.remove(u);
+		Query q = em.createQuery("delete from usuario u "
+				+ "where u.id = :id");
+		q.setParameter("id", u.getId());
+		q.executeUpdate();
+		
+		System.out.println();
+		listar();
+		
+		
 		
 		
 		
@@ -41,6 +61,7 @@ public class Test {
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	private static void listar() {
 		List<Usuario> usuarios = 
 				em.createNamedQuery("Usuario.findAll")
