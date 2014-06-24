@@ -54,4 +54,9 @@ public class Usuario implements Serializable {
 		this.nombre = nombre;
 	}
 
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", clave=" + clave + ", nombre=" + nombre
+				+ "]";
+	}
 }

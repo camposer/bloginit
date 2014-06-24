@@ -29,6 +29,7 @@ public class Test {
 		u.setClave("123");
 		em.persist(u);
 		
+		System.out.println();
 		listar();
 		
 		
