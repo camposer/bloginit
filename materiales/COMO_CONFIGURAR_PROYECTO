@@ -1,0 +1,21 @@
+0.- Iniciar derby ($DERBY_HOME/bin/startNetworkServer.bat)
+
+1.- Eliminar el proyecto BlogInit (si está en el workspace de Eclipse)
+
+2.- Descargar el zip del repositorio
+	http://github.com/camposer/bloginit
+
+3.- Importar el nuevo proyecto
+	File -> Import -> Existing projects into workspace -> Select archive file 
+	- Seleccione el zip descargado en el paso 2
+	- Recompilar fuentes: Project -> Clean
+
+4.- Verifique que el proyecto está configurado dentro del tomcat
+	- Clic derecho sobre el servidor "Add and remove..."
+	- Agregar proyecto en caso de que no esté
+
+5.- Iniciar servidor
+	- Clic derecho sobre el servidor y "Start"
+
+6.- Ejecutar en el navegador:
+	http://localhost:8080/BlogInit/usuario/inicio.blog
