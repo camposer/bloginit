@@ -35,7 +35,7 @@ public class Test {
 		
 		// Modificar
 		u.setNombre("otro");
-		em.persist(u); 	// Lo hace porque "u" había sido
+		em.persist(u); 	// Actualiza porque "u" había sido
 						// persistido anteriormente
 		
 		System.out.println();
@@ -43,17 +43,13 @@ public class Test {
 		
 		// Eliminar
 		//em.remove(u);
-		Query q = em.createQuery("delete from usuario u "
+		Query q = em.createQuery("delete from Usuario u "
 				+ "where u.id = :id");
 		q.setParameter("id", u.getId());
 		q.executeUpdate();
 		
 		System.out.println();
 		listar();
-		
-		
-		
-		
 		
 		tx.commit();
 		
