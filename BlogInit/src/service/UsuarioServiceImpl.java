@@ -9,6 +9,7 @@ import model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import dao.UsuarioDao;
+import exception.BlogServiceException;
 
 @Transactional
 public class UsuarioServiceImpl implements UsuarioService {

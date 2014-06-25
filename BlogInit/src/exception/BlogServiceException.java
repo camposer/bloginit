@@ -1,6 +1,5 @@
-package service;
+package exception;
 
-import exception.BlogException;
 
 @SuppressWarnings("serial")
 public class BlogServiceException extends BlogException {

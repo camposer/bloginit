@@ -2,6 +2,7 @@ package service;
 
 import java.util.List;
 
+import exception.BlogServiceException;
 import model.Usuario;
 
 public interface UsuarioService {
