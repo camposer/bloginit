@@ -1,0 +1,15 @@
+eliminar(form) {
+	var e = confirm("Seguro?");
+	if (e) {
+		document.forms[form].sumbit();
+	}
+	
+ }
+
+---
+
+<form name="elena1" action="EliminaArticulo">
+	XXXXX
+	<input type="hidden" name="id" value="<%= a.getId() %>"/>
+	<input type="button" value="eliminar" onclick="eliminar('elena1')"/>
+</form>
