@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hola Mundo - jQuery</title>
+	<script src="js/jquery-1.11.1.js"></script>
+	<script>
+		var ejecutar = function() {
+			var tabla = "<table border='1'>" +
+				"<tr><td>Uno</td></tr>" +
+				"<tr><td>Dos</td></tr>" +
+				"<tr><td>Tres</td></tr>" +
+				"</table>";
+			
+			$("#contenido").fadeToggle(50000);
+			$("#contenido").html("Hola mundo" + tabla);
+		};
+
+		var atras = function() {
+			document.history.go(-1);
+		};
+		
+		$(document).ready(function() { // Envuelve objeto
+			$("#contenido").html("Vacío"); // Envuelve por selector css
+			$("input[type=button][value=clic]").click(ejecutar);
+			$("#atras").click(atras);
+		});
+	</script>
+	<style>
+	#contenido  {
+		background-color: lightgreen; 
+	}
+	</style>
+</head>
+<body>
+	<div id="contenido"></div>
+	<input type="button" value="clic"/>
+	<a href="#" id="atras">
+		Atrás
+	</a>
+</body>
+</html>

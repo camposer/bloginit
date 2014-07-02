@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hola mundo</title>
+	<script>
+		var a = 2;
+		var texto = "Hola mundo ";
+		
+		function holaMundo1(param) {
+			window.alert(texto + param);
+		}
+		
+		var holaMundo2 = function(param) {
+			window.alert(texto + param);
+		};
+		
+		// Callback (programación asíncrona!)
+		var holaMundo3 = function(llamamePaTras, param) {
+			llamamePaTras(param);
+		};
+		
+		// Funciones
+		holaMundo1("1");
+		holaMundo2("2");
+		
+		// Callbacks
+		holaMundo3(holaMundo1, "3");
+		
+		// JSON
+		var imprimir = function() {
+			return "[ id = " + this.id + 
+			          ", nombre = " + this.nombre + 
+			          ", apellido = " + this.apellido + " ]";
+		};
+		
+		var respirar = function() {
+			window.alert("Estoy respirando...");
+		};
+		
+		var p1 = {
+			id: 1,
+			nombre: "Juan",
+			apellido: "Pérez",
+			caminar: function() {
+				window.alert("Estoy caminando... " + this.nombre);	
+			}
+		};
+		
+		var p2 = {
+				nombre: "María"
+		}
+		p2.walk = p1.caminar;
+		p2.walk();
+		p2.toString = imprimir;
+		window.alert(p2);
+		
+		window.alert(p1);
+		p1.toString = imprimir;
+		window.alert(p1);
+
+		p1.mirespirar = respirar;
+		p1.mirespirar();
+		
+		window.alert("Nombre: " + p1.nombre);
+		p1.nombre = "Juanito";
+		window.alert("Nombre: " + p1.nombre);
+		p1.caminar();
+	</script>
+</head>
+<body>
+
+</body>
+</html>

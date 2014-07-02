@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Hola Mundo - jQuery</title>
+	<script>
+		var clic = function() {
+			var tabla = "<table border='1'>" +
+				"<tr><td>Uno</td></tr>" +
+				"<tr><td>Dos</td></tr>" +
+				"<tr><td>Tres</td></tr>" +
+				"</table>";
+			
+			var contenido = 
+				document.getElementById("contenido");
+			
+			contenido.innerHTML = "Hola mundo" + tabla;
+		};
+		
+		var init = function() {
+			var contenido = 
+				document.getElementById("contenido");
+			
+			contenido.innerHTML = "Vacío";			
+		};
+		
+	</script>
+	<style>
+	#contenido  {
+		background-color: green; 
+	}
+	</style>
+</head>
+<body onload="init()">
+	<div id="contenido"></div>
+	<input type="button" value="clic" onclick="clic()"/>
+	<a href="#" onclic="javascript:window.history.go(-1)">
+		Atrás
+	</a>
+</body>
+</html>
