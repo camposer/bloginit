@@ -9,19 +9,11 @@ Enlaces
 - Mocks Aren't Stubs
 http://martinfowler.com/articles/mocksArentStubs.html
 
-Maven
------
+Despliegue
+----------
 
-Para configurar el proxy, agregar lo siguiente al archivo $HOME_USER/settings.xml
-
-<settings>
-  <proxies>
-   <proxy>
-      <active>true</active>
-      <protocol>http</protocol>
-      <host>XXXXXXX</host>
-      <port>8080</port>
-    </proxy>
-  </proxies>
-</settings>
-
+Para desplegar el proyecto en la Web deberá crear un WAR y subirlo a un Contenedor de Servlets o Servidor de Aplicaciones. Por ejemplo:
+1. Crear una cuenta gratuita en openshift.com
+2. Crear una Base de Datos MySQL y modificar los parámetros de conexión en el persistence.xml (comentados ahora)
+3. Crear WAR. Clic derecho sobre el proyecto y seleccionar exportar "como WAR".
+4. Desplegar WAR en panel de configuración de Tomcat
